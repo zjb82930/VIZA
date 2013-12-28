@@ -98,16 +98,46 @@
         .picScroll-top .hd .next{ background-position:0 -140px;  }
         .picScroll-top .hd .prevStop{ background-position:-60px -100px;  }
         .picScroll-top .hd .nextStop{ background-position:-60px -140px;  }
-        .picScroll-top .hd ul{ float:right; overflow:hidden; zoom:1; margin-top:10px; zoom:1; }
+        .picScroll-top .hd ul{ float:right; overflow:hidden; zoom:1; margin-top:10px; zoom:1;position:relative;  }
         .picScroll-top .hd ul li{ float:left;  width:9px; height:9px; overflow:hidden; margin-right:5px; text-indent:-999px; cursor:pointer;  }
         .picScroll-top .hd ul li.on{ background-position:0 0; }
         .picScroll-top .bd{}
         .picScroll-top .bd ul{ overflow:hidden; zoom:1;}
-        .picScroll-top .bd ul li{ text-align:center; zoom:1; }
+        .picScroll-top .bd ul li{ text-align:center; zoom:1;height: 400px; margin-top: 20px;}
         .picScroll-top .bd ul li .pic{ text-align:center; }
         .picScroll-top .bd ul li .pic img{ width:800px; height:400px; display:block; }
         .picScroll-top .bd ul li .pic a:hover img{ border-color:#999;  }
         .picScroll-top .bd ul li .title{ line-height:24px; }
+
+        .prev{
+            position: absolute;
+            top:0;
+            width:800px;
+            height: 200px;
+            background-color: #fff;
+
+        }
+        .next{
+            position: absolute;
+            bottom:0;
+            width:800px;
+            height: 200px;
+            background-color: #fff;
+            
+        }
+
+        .gradient{ 
+            background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.1) 100%);
+            background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(0,0,0,0.6) 60%,rgba(0,0,0,0.1) 100%); 
+            background: -o-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(0,0,0,0.6) 60%,rgba(0,0,0,0.1) 100%);
+            background: linear-gradient(top, rgba(0,0,0,1) 0%,rgba(0,0,0,0.6) 60%,rgba(0,0,0,0.0.1) 100%);
+        }
+        .gradient2{ 
+            background: -moz-linear-gradient(bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.1) 100%);
+            background: -webkit-linear-gradient(bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,0.6) 60%,rgba(0,0,0,0.1) 100%); 
+            background: -o-linear-gradient(bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,0.6) 60%,rgba(0,0,0,0.1) 100%);
+            background: linear-gradient(bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,0.6) 60%,rgba(0,0,0,0.1) 100%);
+        }
 
     </style>
 </head>
@@ -127,48 +157,25 @@
                 <div class="bd">
                     <ul class="picList" >
                         <li>
-                            <div class="pic"><a href="http://www.SuperSlide2.com" target="_blank"><img src="img/design-cam-1.jpg" /></a></div>
+                            <div class="pic"><img src="img/top.png" /></div>
                         </li>
                         <li>
-                            <div class="pic"><a href="http://www.SuperSlide2.com" target="_blank"><img src="img/design-cam-2.jpg" /></a></div>
+                            <div class="pic"><img src="images/visual-01.png" /></div>
                         </li>
                         <li>
-                            <div class="pic"><a href="http://www.SuperSlide2.com" target="_blank"><img src="img/design-cam-3.jpg" /></a></div>
+                            <div class="pic"><img src="images/visual-02.png" /></div>
                         </li>
                         <li>
-                            <div class="pic"><a href="http://www.SuperSlide2.com" target="_blank"><img src="img/design-cam-1.jpg" /></a></div>
+                            <div class="pic"><img src="images/visual-03.png" /></div>
                         </li>
                         <li>
-                            <div class="pic"><a href="http://www.SuperSlide2.com" target="_blank"><img src="img/design-cam-2.jpg" /></a></div>
-                        </li>
-                        <li>
-                            <div class="pic"><a href="http://www.SuperSlide2.com" target="_blank"><img src="img/design-cam-3.jpg" /></a></div>
+                            <div class="pic"><img src="images/visual-04.png" />/<div>
                         </li>
                     </ul>
+                    <a class="prev gradient" href="javascript:void(0)"></a>
+                    <a class="next gradient2" href="javascript:void(0)"></a>
                 </div>
             </div>
-            <!--
-            <div class="wrapper">
-
-                <ul id="sb-slider" class="sb-slider">
-                    <li>
-                        <a href="#" target="_blank"><img src="img/design-cam-1.jpg"/></a>
-                    </li>
-                    <li>
-                        <a href="#" target="_blank"><img src="img/design-cam-2.jpg"/></a>
-                    </li>
-                    <li>
-                        <a href="#" target="_blank"><img src="img/design-cam-3.jpg"/></a>
-                    </li>
-                </ul>
-
-                <div id="nav-arrows" class="nav-arrows">
-                    <a href="#">Next</a>
-                    <a href="#">Previous</a>
-                </div>
-
-            </div>
-            -->
         </div>
     </div>
     <div id="page-menu">
@@ -201,4 +208,4 @@
         pnLoop:true
     });
 </script>
-</html>
+</html> 

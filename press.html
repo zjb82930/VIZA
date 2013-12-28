@@ -65,18 +65,92 @@
         }
         #page-content h3{
             color:#4c4948;
+            text-align: left;
+        }
+
+        .picScroll-top{ margin:0 auto;  width:800px;  overflow:hidden; position:relative; }
+        .picScroll-top .hd{ overflow:hidden;  height:30px; background:#f4f4f4; padding:0 10px;  }
+        .picScroll-top .hd .prev,.picScroll-top .hd .next{ display:block;  width:9px; height:5px; float:right; margin-right:5px; margin-top:10px;  overflow:hidden;
+             cursor:pointer; background:url("images/arrow.png") 0 -100px no-repeat;}
+        .picScroll-top .hd .next{ background-position:0 -140px;  }
+        .picScroll-top .hd .prevStop{ background-position:-60px -100px;  }
+        .picScroll-top .hd .nextStop{ background-position:-60px -140px;  }
+        .picScroll-top .hd ul{ float:right; overflow:hidden; zoom:1; margin-top:10px; zoom:1;position:relative;  }
+        .picScroll-top .hd ul li{ float:left;  width:9px; height:9px; overflow:hidden; margin-right:5px; text-indent:-999px; cursor:pointer;  }
+        .picScroll-top .hd ul li.on{ background-position:0 0; }
+        .picScroll-top .bd{}
+        .picScroll-top .bd ul{ overflow:hidden; zoom:1;}
+        .picScroll-top .bd ul li{ text-align:center; zoom:1;height: 400px; margin-top: 40px;}
+        .picScroll-top .bd ul li .pic{ text-align:center; }
+        .picScroll-top .bd ul li .pic img{ width:800px; height:400px; display:block; }
+        .picScroll-top .bd ul li .pic a:hover img{ border-color:#999;  }
+        .picScroll-top .bd ul li .title{ line-height:24px; }
+
+        .prev{
+            position: absolute;
+            top:0;
+            width:800px;
+            height: 200px;
+            background-color: #fff;
+
+        }
+        .next{
+            position: absolute;
+            bottom:0;
+            width:800px;
+            height: 200px;
+            background-color: #fff;
+            
+        }
+
+        .gradient{ 
+            background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.1) 100%);
+            background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(0,0,0,0.6) 60%,rgba(0,0,0,0.1) 100%); 
+            background: -o-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(0,0,0,0.6) 60%,rgba(0,0,0,0.1) 100%);
+            background: linear-gradient(top, rgba(0,0,0,1) 0%,rgba(0,0,0,0.6) 60%,rgba(0,0,0,0.0.1) 100%);
+        }
+        .gradient2{ 
+            background: -moz-linear-gradient(bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.1) 100%);
+            background: -webkit-linear-gradient(bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,0.6) 60%,rgba(0,0,0,0.1) 100%); 
+            background: -o-linear-gradient(bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,0.6) 60%,rgba(0,0,0,0.1) 100%);
+            background: linear-gradient(bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,0.6) 60%,rgba(0,0,0,0.1) 100%);
         }
     </style>
 </head>
 <body>
     <div id="page-logo"><img src="img/logo.png" width="100" height="20"/></div>
     <div id="page-content">
-        <div class="content-img"><img src="img/press-1.jpg" width="100%"/></div>
-        <h3>/于米兰拍摄2013秋冬[身随意动·塑]形象大片<h3>
-        <div class="content-img"><img src="img/press-2.png" width="100%"/></div>
-        <h3>/2013秋冬新品发布会<h3>
-        <div class="content-img"><img src="img/press-3.png" width="100%"/></div>
-        <h3>/新锐设计师John以“空间蒙太奇”手法，打造VIZAVIZA全新店铺形象<h3>
+        <div class="content-img">
+            <div class="picScroll-top">
+                <div class="bd">
+                    <ul class="picList" >
+                        <li>
+                            <div class="pic"><img src="img/top.png" /></div>
+                        </li>
+                        <li>
+                            <div class="pic"><img src="img/17.png" /><h3>/于米兰拍摄2013秋冬[身随意动·塑]形象大片<h3></div>
+                        </li>
+                        <li>
+                            <div class="pic"><img src="img/18.png" /><h3>/于米兰拍摄2013秋冬[身随意动·塑]形象大片<h3></div>
+                        </li>
+                        <li>
+                            <div class="pic"><img src="img/19.png" /><h3>/于米兰拍摄2013秋冬[身随意动·塑]形象大片<h3></div>
+                        </li>
+                        <li>
+                            <div class="pic"><img src="img/20.png" /><h3>/于米兰拍摄2013秋冬[身随意动·塑]形象大片<h3></div>
+                        </li>
+                        <li>
+                            <div class="pic"><img src="img/21.png" /><h3>/于米兰拍摄2013秋冬[身随意动·塑]形象大片<h3></div>
+                        </li>
+                        <li>
+                            <div class="pic"><img src="img/22.png" /><h3>/于米兰拍摄2013秋冬[身随意动·塑]形象大片<h3></div>
+                        </li>
+                    </ul>
+                    <a class="prev gradient" href="javascript:void(0)"></a>
+                    <a class="next gradient2" href="javascript:void(0)"></a>
+                </div>
+            </div>
+        </div>
     </div>
     <div id="page-menu">
         <dl>
@@ -88,7 +162,17 @@
         </dl> 
     </div>
 </body>
-<script src="http://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="js/jquery1.42.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.source2.js"></script>
 <script type="text/javascript">
+    jQuery(".picScroll-top").slide({
+        mainCell:".bd ul",
+        autoPage:true,
+        autoPlay:true,
+        scroll:1,
+        effect:"top",
+        vis:2,
+        pnLoop:true
+    });
 </script>
 </html>
