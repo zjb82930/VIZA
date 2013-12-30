@@ -1,517 +1,279 @@
 
-<!DOCTYPE HTML>
+<!doctype html>
+
 <!--
-  ~ jquery.mb.components
-  ~ Copyright (c) 2001-2010. Matteo Bicocchi (Pupunzi); Open lab srl, Firenze - Italy
-  ~ email: mbicocchi@open-lab.com
-  ~ site: http://pupunzi.com
+  ~ /*******************************************************************************
+  ~  jquery.mb.components
+  ~  file: demo.html
   ~
-  ~ Licences: MIT, GPL
-  ~ http://www.opensource.org/licenses/mit-license.php
-  ~ http://www.gnu.org/licenses/gpl.html
+  ~  Copyright (c) 2001-2013. Matteo Bicocchi (Pupunzi);
+  ~  Open lab srl, Firenze - Italy
+  ~  email: matteo@open-lab.com
+  ~  site:  http://pupunzi.com
+  ~  blog:  http://pupunzi.open-lab.com
+  ~   http://open-lab.com
+  ~
+  ~  Licences: MIT, GPL
+  ~  http://www.opensource.org/licenses/mit-license.php
+  ~  http://www.gnu.org/licenses/gpl.html
+  ~
+  ~  last modified: 15/11/13 23.32
+  ~  ******************************************************************************/
   -->
 
-<html lang="en">
+<html>
 <head>
-  <title>mb.ideas.repository - web-design, jQuery, design and more</title>
-  <meta charset=utf-8 />
-  <meta http-equiv="X-UA-Compatible" content="chrome=1">
-  <META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>mb.bgndGallery 1.0</title>
+<style type="text/css">
 
-  <meta name="title" content="mb.ideas.repository - Matteo Bicocchi's personal website">
-  <meta name="description" content="Matteo Bicocchi ideas repository, find out the jQuery mb.components and change the user experience on your web pages!">
-  <meta name="keywords" content="Matteo Bicocchi, pupunzi, jquery components, plug in, teamwork, webwork, morethanicons, patapage, bugsVoice,Licorize, jquery, components, javascript, mbContainerPlus, mbMenu, mb.ideas, mb.components">
-  <meta name="AUTHOR" content="Matteo Bicocchi, Open Lab">
-  <meta name="Copyright" content="Copyright 2010-11, Matteo Bicocchi Open Lab">
-  <meta name="owner" content="Matteo Bicocchi, Open Lab srl">
-  <meta content="Webwork4 by OpenLab" name="GENERATOR">
-  <meta name="alexaVerifyID" content="xxjno3i8HOTTaByN0V2ixH9NDb4" />
-  <meta name="robots" content="ALL">
+    body{
+        margin:0px;
+        background: #284352;
+        z-index:0;
+        margin:0;
+        padding:0;
+        font-size: 12px;
+            font-family: "Arial";
+        /*-webkit-filter: blur(3px)*/
+    }
 
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  <meta name="viewport" content="user-scalable=yes, width=1024" />
-
-  <!--Google fonts-->
-  <link href='http://fonts.googleapis.com/css?family=Cabin+Sketch:bold' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Sunshiney' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-
-  <link href="css/mb.site.02.reset.css" media="all" rel="stylesheet" type="text/css">
-  <!--[if lte IE 8 ]>
-  <link href="css/mb.site.02_ie.css" media="all" rel="stylesheet" type="text/css">
-  <![endif]-->
-
-  <link href="css/mb.site.02.css" media="all" rel="stylesheet" type="text/css">
-  <link href="inc/jquery.mb.retweet/css/mb.retweet.css" media="all" rel="stylesheet" type="text/css">
-  <link href="inc/prettify/prettify.css" media="all" rel="stylesheet" type="text/css">
+    #wrapper{
+        position:absolute;
+        min-height: 100%;
+        min-width: 100%;
+        top:0;
 
 
-  <!--[if lte IE 8 ]>
-  <script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-  <script type="text/javascript" src="inc/jquery.easing.1.3.js"></script>
-  <script type="text/javascript" src="inc/jquery.history.js"></script>
-  <script type="text/javascript" src="inc/jquery.activity.min.js"></script>
-  <script type="text/javascript" src="inc/prettify/prettify.js"></script>
-  <script type="text/javascript" src="inc/jquery.mb.retweet/inc/jquery.mb.retweet.js"></script>
-  <script type="text/javascript" src="inc/jquery.jgfeed.js"></script>
-  <script type="text/javascript" src="inc/jquery.mb.sounds.js"></script>
-  <script type="text/javascript" src="inc/jquery.mb.CSSAnimate.js"></script>
-
-  <script type="text/javascript" src="inc/mb.ideas.02.js"></script>
-
-</head>
-<body>
-<div id="site">
-  <header id="header">
-    <h1>mb.ideas.repository</h1>
-  </header>
-
-  <div id="navigation">
-    <div id="loader"></div>
-
-    <!--General menu-->
-
-    <nav id="menu">
-
-      <a id="welcome" href="" class="ajax sel">.Welcome</a>
-      <a id="components" class="ajax" href="mb.components/components.html">.mb.jquery</a>
-      <a id="news" class="ajax" href="mb.news/news.html">.What's.new</a>
-      <a id="network" class="ajax" href="mb.network/network.html">.my.network</a>
-      <a id="about" class="ajax" href="mb.info/info.html">.About.me</a>
-      <a id="creativity" class="ajax" href="mb.creativity/creativity.html">.creativity</a>
-
-    </nav>
-
-    <!--
-            <div style="padding:6px;position:absolute;z-index:1000; bottom:10px; right:10px; -webkit-border-radius:7px;-moz-border-radius:7px;border:2px solid white; background:#000;text-align:center;color:white;">
-                Please support my work<br>with a free donation!<br><br>
-                <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=V6ZS8JPMZC446&amp;lc=GB&amp;item_name=mb%2eideas&amp;item_number=MBIDEAS&amp;currency_code=EUR&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG_global%2egif%3aNonHosted">
-                    <img alt="PayPal" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG_global.gif" border="0">
-                </a>
-            </div>
-    -->
-
-    <!--Sub menus -->
-
-    <nav class="sideContent" data-id="components">
-      <h2></h2>
-      <a data-id="menu" href="mb.components/components.html" class="ajax">back to components page</a>
-
-      <div class="column">
-        <h3>.interface</h3>
-        <div>
-          <a id="mb-menu" class="ajax" href="mb.components/mb._menu/menu.html">jquery.mb.menu </a>
-          <a id="mb-containerPlus" class="ajax" href="mb.components/mb.containerPlus/containerPlus.html">jquery.mb.containerPlus</a>
-          <a id="mb-extruder" class="ajax" href="mb.components/mb.extruder/extruder.html">jquery.mb.extruder</a>
-          <a id="mb-tabset" class="ajax" href="mb.components/mb.tabset/tabset.html">jquery.mb.tabset</a>
-          <!--a id="mb-tooltip" class="ajax" href="mb.components/mb.tooltip/tooltip.html">jquery.mb.tooltip</a-->
-          <a id="mb-scrollable" class="ajax" href="mb.components/mb.scrollable/scrollable.html">jquery.mb.scrollable</a>
-          <a id="mb-verticalSlider" class="ajax" href="mb.components/mb.verticalSlider/verticalSlider.html">jquery.mb.verticalSlider</a>
-          <a id="mb-valueSlider" class="ajax" href="mb.components/mb.valueSlider/valueSlider.html">jquery.mb.valueSlider</a>
-        </div>
-      </div>
-      <div class="column">
-        <h3>.media</h3>
-        <div>
-          <a id="mb-zoomify" class="ajax" href="mb.components/mb.zoomify/zoomify.html">jquery.mb.zoomify</a>
-          <a id="mb-bgndGallery" class="ajax" href="mb.components/mb.bgndGallery/bgndGallery.html">jquery.mb.bgndGallery</a>
-          <a id="mb-miniAudioPlayer" class="ajax" href="mb.components/mb.miniAudioPlayer/miniAudioPlayer.html">jquery.mb.miniAudioPlayer</a>
-          <!--<a id="mb-sounds" class="ajax" href="mb.components/mb.sounds/sounds.html">jquery.mb.sounds</a>-->
-          <a id="mb-gallery" class="ajax" href="mb.components/mb.gallery/gallery.html">jquery.mb.gallery</a>
-          <a id="mb-YTPlayer" class="ajax" href="mb.components/mb.YTPlayer/YTPlayer.html">jquery.mb.YTPlayer</a>
-          <a id="mb-maskedGallery" class="ajax" href="mb.components/mb.maskedGallery/maskedGallery.html">jquery.mb.maskedGallery</a>
-          <a id="mb-imageNavigator" class="ajax" href="mb.components/mb.imageNavigator/imageNavigator.html">jquery.mb.imageNavigator</a>
-          <a id="mb-mediaEmbedder" class="ajax" href="mb.components/mb.mediaEmbedder/mediaEmbedder.html">jquery.mb.mediaEmbedder</a>
-        </div>
-      </div>
-    </nav>
-
-    <nav class="sideContent" data-id="creativity">
-      <h2></h2>
-      <a data-id="menu" href="mb.creativity/creativity.html" class="ajax">back to creativity page</a>
-      <br>
-      <a id="mb-photo" class="ajax" href="mb.creativity/photos.html" >my.photos</a>
-      <a id="mb-drawings" class="ajax" href="mb.creativity/drawings.html">my.drawings</a>
-      <a id="mb-video" class="ajax" href="mb.creativity/videos.html">my.videos</a>
-    </nav>
-
-    <nav class="sideContent" data-id="about">
-      <h2>contacts</h2>
-      <img src="mb.info/qrcode.png" style="width:180px">
-      <br>
-      <br>
-      <a id="mb-mail" href="mailto:matteo[at]open-lab.com?subject=from mbideasrepository">email.me</a>
-      <a id="mb-place" class="" href="http://pupunzi.open-lab.com" target="_blank">my.blog</a>
-
-      <div id="subscribe1" class="newsletter">
-        <h3>keep in touch,<br>subscribe to Pupunzi's newsletter</h3>
-          <!-- Begin MailChimp Signup Form -->
-          <div id="mc_embed_signup">
-              <form id="mailchimp2" action="http://pupunzi.us6.list-manage.com/subscribe/post?u=4346dc9633&amp;id=91a005172f" method="post"  name="mc-embedded-subscribe-form" class="validate" target="_blank">
-                  <input id="newsLetterMail1" type="email" value="" name="EMAIL" class="email" placeholder="your email address" required>
-                  <button type="button" value="Subscribe" name="subscribe" onclick=" subscribeMail(this); return false">subscribe</button>
-              </form>
-          </div>
-          <!--End mc_embed_signup-->
-      </div>
-    </nav>
-
-    <aside class="sideContent" data-id="welcome">
-      <h2 class="dontRefill">Spot light</h2>
-      <div id="spotlight"></div>
-    </aside>
-
-    <h1></h1>
-
-  </div>
-
-  <div id="wrapper">
-
-    <!--twitter button-->
-    <div id="shareBar">
-      <div id="soundManager" title="audio on/off">Vm</div>
-      <a class="mbretweet self" href="" title="share on twitter">jquery.mb.components, imagine a better web!</a>
-      <span class="shareBtn" id="facebookShare" title="share on facebook"></span>
-      <span class="shareBtn" id="redditShare" title="share on reddit" onclick=" window.open('http://www.reddit.com/submit?url=' + encodeURIComponent(window.location),'shareWindow'); return false; "></span>
-    </div>
-
-    <div id="content"></div>
-  </div>
-
-  <div id="html5">
-    <a href="http://www.w3.org/html/logo/">
-      <img src="http://www.w3.org/html/logo/badge/html5-badge-h-css3-multimedia-semantics.png" alt="HTML5 Powered with CSS3 / Styling, Multimedia, and Semantics" title="HTML5 Powered with CSS3 / Styling, Multimedia, and Semantics">
-    </a>
-  </div>
-</div>
-
-<div id="ieAlert" style="display:none">
-  <h1>
-    Although you can see and navigate this site, I recommend you to use a modern browser to reach the maximum user experience.
-    Your browser actually doesn't support many new features the web can offers.<br><br>
-    Here are some good choices:<br><br>
-    <a href="http://www.mozilla.com/it/firefox">Firefox</a><br>
-    <a href="http://www.google.com/chrome">Chrome</a><br>
-    <a href="http://www.apple.com/safari/">Safari</a><br><br>
-    <div class="notNow" onclick="notNow()" style="cursor:pointer; color:#000; text-align:right;">not now, go on please.</div>
-  </h1>
-</div>
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
 
 
-<div id="olPromo">
-  <div id="olPitch">
-    We can make a difference!
-    <br>
-  </div>
-  <div id="olMoreContent" style="display:none">
-    <img src="media/specials/olLogo.png">
-    <br>
-    <h1>
-      <!--
-                  What Open lab can offers you:
-      -->
-      Open Lab can offer:
+    }
 
-      <div class="olContent">
-        Open Lab is a dynamic company established in Florence, Italy in 2001.<br>
-        We are focused on two aims, developing web applications and products, supplying quality design solutions.
-      </div>
-    </h1>
+    #page-right{
+            position: relative; 
+            float: right;
+            width: 250px; 
+            background: -webkit-radial-gradient(left top, circle farthest-corner, rgba(255, 255, 255, 0.9) 0%, rgba(38, 150, 165, 0.1) 75%);  
+            -moz-box-shadow: -5px 1px 10px rgba(0, 0, 0, 0.4);
+            -o-box-shadow: -5px 1px 10px rgba(0, 0, 0, 0.4);
+            -webkit-box-shadow: -5px 1px 10px rgba(0, 0, 0, 0.4);
+            box-shadow: -5px 1px 10px rgba(0, 0, 0, 0.4); 
+        }
 
-    <div id="olArguments">
-      <h2>
-        <span class="olArgTitle">Creating meaningful web sites</span>
-        <div class="olArgContent">
-          <div class="olArgText">
-            <p>Are you expressing your mission, your ideas, your passion, your creativity adequately through your website?
-              For most people, you ARE your website. If you want people to remember you, to get what you can offer,
-              why not use our services to elaborate on your ideas and create a web presence that people will understand?<br>
-              We have been creating web sites since 1998 – improving web sites ever since.
-            </p>
+    #page-menu { 
+            position: relative; 
+            width: 250px; 
+            float:right;    
+        }
 
-          </div>
-          <div class="icon"><img src="media/ads/ol/web.png"></div>
-        </div>
-      </h2>
-      <h2>
-        <span class="olArgTitle">Reach people with games</span>
-        <div class="olArgContent">
-          <div class="olArgText">
-            <p>How to reach more people? How to give something and get attention in exchange?
-              Games are a universal medium for communication, that until now only few large corporations have used (very effectively)
-              for communicating with customers. With Open Lab you can get creative, high quality browser games to have a first pleasant contact with your visitors.<br>
-              <br>
-              A different way to make you unique!<br>
-              <br>
-              See our game: <a href="http://adslifegame.com" target="_blank">Adslife</a><br>
-              And our gaming blog: <a href="http://gamamoto.com" target="_blank">Gamamoto</a>
-            </p>
-          </div>
-          <div class="icon"><img src="media/ads/ol/game.png"></div>
-        </div>
-      </h2>
-      <h2>
-        <span class="olArgTitle">Video production</span>
-        <div class="olArgContent">
-          <div class="olArgText">
-            Expressing your services and ideas through a video is one of the most effective ways to communicate quickly to a wide audience, without asking visitors to read lengthy texts – which is the best way to make visitors escape.
-            <br>
-            <br>
-            Here too Open Lab can produce your promotional video quickly and with high quality: check out our product shorts: <a href="http://www.youtube.com/user/Gamamotogames" target="_blank">Gamamoto</a>, <a href="http://licorize.com/applications/licorize/site/licorize-video.jsp" target="_blank">Licorize</a>, <a href="http://www.youtube.com/user/teamworksoftware" target="_blank">Teamwork</a>
-          </div>
-          <div class="icon"><img src="media/ads/ol/video.png"></div>
-        </div>
-      </h2>
-      <h2>
-        <span class="olArgTitle">Products</span>
-        <div class="olArgContent">
-          To see what we can do, check out our products:
-          <br>
-          <br>
-          <a href="http://licorize.com" target="_blank"><img src="media/ads/ol/licorize.jpg" align="absmiddle" border="0"></a>&nbsp;<a href="http://twproject.com" target="_blank"><img src="media/ads/ol/teamwork.jpg" align="absmiddle" border="0"></a>
-        </div>
-      </h2>
+    #logo{
+        position: relative;
+        float: left;
+          margin-left: 50px;
+      }
 
-      <h2 class="contactUs">
-        <span class="olArgTitle sel">Contact us for a quote!</span>
-        <div class="olArgContent" style="display: block; color:white">
-          <div class="olArgText">
-            Open Lab s.r.l.<br>
-            via Venezia 18,b<br>
-            50121 Florence, Italy<br>
-            tel. +39 055 5522779<br>
-            mail: <a href="mailto:info@open-lab.com?subject=Quote request from pupunzi.com">info@open-lab.com</a><br>
-            site: <a href="http://www.open-lab.com" target="_blank">www.open-lab.com</a>
-          </div>
+    #page-menu dt{
+          font-size: 12px;
+          margin-left:20px;
+          font-weight: bold;
+          line-height: 20px;
+          margin-bottom: 5px;
+      }
+      #page-menu dt a{
+          text-decoration: none;
+          color:#000;
+      }
 
-        </div>
-      </h2>
+    .text{
+        position: relative;
+        top:40px;
+        padding-right: 50px;
+    }
 
-      <h2 class="subscribe">
-        <span class="olArgTitle">Subscribe to Pupunzi's newsletter!</span>
-        <div class="olArgContent" style=" color:white">
+    .text h1{
+        font-weight:normal;
+        line-height:130%;
+    }
 
-          <div id="subscribe2" class="newsletter">
-            <h3>keep in touch,<br>subscribe to the Pupunzi's newsletter</h3>
-              <!-- Begin MailChimp Signup Form -->
-              <div id="mc_embed_signup1">
-                  <form id="mailchimp1" action="http://pupunzi.us6.list-manage.com/subscribe/post?u=4346dc9633&amp;id=91a005172f" method="post"  name="mc-embedded-subscribe-form" class="validate" target="_blank">
-                      <input id="newsLetterMail2" type="email" value="" name="EMAIL" class="email" placeholder="your email address" required>
-                      <button type="button" value="Subscribe" name="subscribe" onclick=" subscribeMail(this); return false">subscribe</button>
-                  </form>
-              </div>
-              <!--End mc_embed_signup-->
-          </div>
+    .text h2{
+        font-weight:normal;
+        line-height:130%;
+    }
 
-        </div>
-      </h2>
+    #controls div{
+        display:inline-block;
+        padding:5px;
+        margin:1px;
+        color:#fff;
+        border:1px solid #fff;
+        -moz-border-radius:4px;
+        -webkit-border-radius:4px;
+        -o-border-radius:4px;
+        border-radius:4px;
+    }
 
-    </div>
-  </div>
-  <div id="olMore">see how...</div>
-  <div id="olClose" style="display:none">close</div>
+    button{
+        display:inline-block;
+        padding:5px;
+        margin:1px;
+        color:#fff;
+        border:1px solid #fff;
+        -moz-border-radius:4px;
+        -webkit-border-radius:4px;
+        -o-border-radius:4px;
+        border-radius:4px;
+        background: rgba(0, 0, 0, 0.72);
+        cursor: pointer;
+    }
 
-</div>
+    button:hover{
+        background:rgba(255,255,255,.9);
+        color:#000;
+    }
+
+    #controls div:hover:not(.counter){
+        background:rgba(255,255,255,.9);
+        color:#000;
+    }
+
+    #controls div:not(.counter){
+        background: rgb(190, 41, 16);
+        cursor:pointer;
+    }
+
+    #controls.fullScreen_controls div:hover:not(.counter){
+        background:rgba(255,255,255,.9);
+        color:#000;
+    }
+
+    #controls.fullScreen_controls div:not(.counter){
+        background: rgba(0, 0, 0, 0.82);
+        cursor:pointer;
+    }
+
+    #controls div.sel{
+        background:rgba(255,255,255,.9);
+    }
+
+    #thumbnails{
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        background: rgba(255,255,255,.4);
+        line-height: 0;
+        font-size: 0;
+        padding: 4px;
+    }
+
+    #thumbnails img{
+        margin: 2px;
+        width: 40px;
+        height: auto;
+        cursor: pointer;
+        display: inline-block;
+        border: 3px solid transparent;
+    }
+
+    #thumbnails img.sel{
+        margin: 2px;
+        width: 40px;
+        cursor: pointer;
+        display: inline-block;
+        border: 3px solid white;
+    }
 
 
-<div class="turnOnAudio"></div>
+</style>
+<link href='http://fonts.googleapis.com/css?family=Lekton' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script type="text/javascript" src="js/effects.js"></script>
 
 <script type="text/javascript">
 
-  document.showAd=true;
+    $(function(){
 
-  var mySound={
-    Mureau:{ogg:"sounds/Cage-John_Mureau_1_1972.ogg",mp3:"sounds/Cage-John_Mureau_1_1972.mp3",loop:true, volume:100,fade:3000},
-    birds:{ogg:"sounds/birds.ogg",mp3:"sounds/birds.mp3", loop:true, volume:60,fade:3000},
-    subway_station_nyc:{ogg:"sounds/subway_station_nyc.ogg",mp3:"sounds/subway_station_nyc.mp3", loop:true, volume:100,fade:3000},
-    jaspertine:{ogg:"sounds/jaspertine_-_pling.ogg",mp3:"sounds/jaspertine_-_pling.mp3", loop:true, volume:100,fade:3000},
-    naturesoundsfor:{ogg:"sounds/naturesoundsfor.ogg",mp3:"sounds/naturesoundsfor.mp3", loop:true, volume:100,fade:3000},
-    light:{ogg:"sounds/light.ogg",mp3:"sounds/light.mp3",loop:true, volume:100,fade:3000},
-    untitled:{ogg:"sounds/Kato_Hideki_and_Urular_Scherrer_-_05_-_Untitled.ogg",mp3:"sounds/Kato_Hideki_and_Urular_Scherrer_-_05_-_Untitled.mp3",loop:true, volume:100,fade:3000}
-  };
+        $("body").css({overflow:"hidden"})
 
-  $.extend($.mbAudio.sounds,mySound);
 
-  $(function(){
 
-    $("#facebookShare").click(function(){
-      window.open("http://www.facebook.com/sharer/sharer.php?u="+encodeURIComponent(self.location.href));
+        $.mbBgndGallery.buildGallery({
+            containment:"body",
+            timer:2000,
+            effTimer:2000,
+            controls:"#controls",
+            grayScale:false,
+            shuffle:true,
+            preserveWidth:false,
+            effect:"blur",
+
+//              effect:{enter:{transform:"scale("+(1+ Math.random()*2)+")",opacity:0},exit:{transform:"scale("+(Math.random()*2)+")",opacity:0}},
+
+            // If your server allow directory listing you can use:
+            // (however this doesn't work locally on your computer)
+
+            //folderPath:"testImage/",
+
+            // else:
+
+            images:[
+                "img/home-01.jpg",
+                "img/home-02.jpg"
+            ],
+
+            onStart:function(){},
+            onPause:function(){},
+            onPlay:function(opt){},
+            onChange:function(opt,idx){},
+            onNext:function(opt){},
+            onPrev:function(opt){}
+        });
+
     });
 
-    /*anti spam*/
-    var email= $("#mb-mail").attr("href");
-    email= email.replace("[at]","@");
-    $("#mb-mail").attr("href",email);
+</script>
 
-    $("#site").hide();
+</head>
+<body>
 
-    //OL AD ----------------------------------------------------------------------
+<div id="wrapper">
+    <div id="logo"><img src="img/logo.png" width="100" height="20"/></div>
+    <div id="page-right">
+      <div id="page-menu"> 
+            <dl>
+                <dt><a href="index.html">HOME</a></dt>
+                <dt><a href="viza.html">VIZAVIZA</a></dt>
+                <dt><a href="design.html">DESIGN</a></dt>
+                <dt><a href="press.html">PRESS</a></dt>
+                <dt><a href="store.html">STORE</a></dt>
+            </dl> 
+        </div>
+    </div>
+</div>
+<div id="thumbnails"></div>
 
-    var olAd=$("#olPromo");
+<script>
 
-    var ol_w=olAd.outerWidth();
-    var ol_h=olAd.outerHeight();
+function initMenu(){
+    var pageRight = $("#page-right");
+    var menu = $("#page-menu");
+    var logo = $("#logo");
+    var screenH = document.documentElement.clientHeight;
+    pageRight.css("padding-top",screenH/2 - $("#page-menu").height()/2);
+    pageRight.css("height",document.documentElement.clientHeight-(screenH/2 - $("#page-menu").height()/2));
 
-    var olPromoCss={opacity:0, top:$(window).height()*.5, left:$(window).width()*.5, marginTop:-(ol_h/2), marginLeft:-(ol_w/2), width:500, minWidth:500, transform:"scale(.1)", webkitTransform:"scale(.1)"};
-    olAd.css(olPromoCss).show();
-    olAd.data("isOpen", true);
+    logo.css("margin-top",screenH/2 - 10);
 
-    setTimeout(function(){
+    menu.css("display","block");
+}
 
-      if($.browser.msie && $.browser.version<9)
-        $("#site").fadeOut(1000,function(){
-          $("#ieAlert").css({opacity:.9}).fadeIn(1000);
-        });
+initMenu();
+window.onresize = function(){
+    initMenu();
+}
 
-      else{
-                var rnd = Math.floor(10+Math.random()*20);
-                if(document.showAd && $.fn.mb_getCookie("olAdCoockie")==null){
-
-          var olAdHeight;
-          olAdHeight= olAd.outerHeight();
-          olAd.CSSAnimate({ transform:"rotate(-"+rnd+"deg) scale(1)", opacity:1},1000,function(){
-            $("#site").fadeIn(2000);
-          });
-
-          setTimeout(function(){
-            if(olAd.data("isFullscreen"))
-              return;
-            olAd.animate({left:-200, transform:"rotate(-"+rnd+"deg)"},1000, function(){
-              olAd.data("isOpen",false);
-            });
-          },3000);
-          olAd.css({cursor:"pointer"});
-        } else
-          $("#site").fadeIn(2000);
-      }
-
-      olAd.bind("mouseenter.olPromo",function(){
-        if(olAd.data("isOpen")) return;
-        olAd.stop().CSSAnimate({left:230, transform:"rotate(0deg)"},500);
-      }).bind("mouseleave.olPromo",function(){
-        if(olAd.data("isOpen")) return;
-        olAd.stop().CSSAnimate({left:-200, transform:"rotate(-"+rnd+"deg)"},500);
-      }).bind("click.olPromo",function(e){
-
-        if (olAd.data("isFullscreen"))
-          return;
-
-        if(olAd.data("isOpen") && olAd.data("isFullscreen")){
-          olAd.CSSAnimate({left:-200, transform:"rotate("+rnd+"deg)"},500);
-          $(".olOverlay").remove();
-          olAd.data("isFullscreen", false);
-          olAd.data("isOpen", false);
-        }else{
-          var overlay=$("<div/>").css({position:"fixed", top:0,left:0, width:"100%", height:"100%",zIndex:100}).addClass("olOverlay");
-          olAd.before(overlay);
-          olAd.data("isFullscreen", true);
-          olAd.data("isOpen", true);
-          olAd.CSSAnimate({top:$(window).height()*.05, left:$(window).width()*.05, marginLeft:0, marginTop:0, width:$(window).width()*.9, height:$(window).height()*.9, transform:"rotate(0deg)"},500,function(){
-            olAd.css({cursor:"default", width:"90%", height:"90%"});
-          });
-          $("#olPitch").fadeOut();
-          $("#olMore").hide();
-          $("#olClose",olAd).fadeIn();
-          $("#olMoreContent").fadeIn();
-
-          e.stopPropagation();
-          e.preventDefault();
-          return false;
-        }
-      });
-
-      $("#olArguments .olArgTitle").bind("click.olPromo", function(){
-        var el=$(this);
-
-        if(el.hasClass("sel")){
-          $("#olArguments .olArgTitle").removeClass("sel");
-          $(".olArgContent").slideUp(function(){});
-          return;
-        }
-        $("#olArguments .olArgTitle").removeClass("sel");
-        el.addClass("sel");
-
-        $(".olArgContent").slideUp(function(){});
-        el.next(".olArgContent").slideDown();
-
-      });
-
-      $("#olClose",olAd).bind("click.olPromo",function(e){
-        $.extend(olPromoCss, {left:-200, transform:"rotate(-"+rnd+"deg)", opacity:1, width:500, height:olAdHeight});
-        $("#olMore",olAd).fadeIn();
-        $(this).fadeOut();
-        $("#olMoreContent").fadeOut();
-        olAd.CSSAnimate(olPromoCss,500, function(){
-          olAd.data("isFullscreen", false);
-          olAd.data("isOpen", false);
-          $("#olPitch").fadeIn(500);
-          olAd.css({cursor:"pointer"});
-          $(".olOverlay").remove();
-        });
-        e.stopPropagation();
-        e.preventDefault();
-        return false;
-      });
-
-    },2000);
-
-    $("#soundManager").toggle(
-      function(){
-        $.mbAudio.muteAllSounds();
-        $("#soundManager").html("V");
-        $.fn.mb_setCookie("audioOff","true",10);
-        audioMessage();
-      },
-      function(){
-        $.mbAudio.unMuteAllSounds();
-        $("#soundManager").html("Vm");
-        $.fn.mb_removeCookie("audioOff");
-        audioMessage();
-      })
-  });
-
-  if($.fn.mb_getCookie("audioOff")==null)
-    audioMessage();
-
-  $(document).one("beforeContentShow",function() {
-    if($.fn.mb_getCookie("audioOff")=="true")
-      $("#soundManager").click();
-  });
-
-  function notNow(){
-    $("#site").fadeIn();
-    $("#ieAlert").fadeOut("slow");
-  }
-
-
-  function subscribeMail(el){
-      var inputMail = $(el).prev("input");
-      var form = $(el).closest("form");
-      var newsletterContent = $(el).closest(".newsletter");
-
-      if(inputMail.val().length=0 ||inputMail.val().indexOf("@")<0 ){
-          alert("A valid email is required");
-          inputMail.focus();
-          return;
-      }else{
-          form.submit();
-      }
-      $(document).mb_setCookie("newsletter",true);
-      setTimeout(function(){
-          newsletterContent.html("<h3>Thank you for your subscription. Click on the link in the email we sent you to confirm.</h3>");
-      },1000);
-      return false;
-  }
-
-
-  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
 </script>
 
 </body>
